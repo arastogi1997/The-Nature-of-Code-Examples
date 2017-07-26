@@ -46,7 +46,7 @@ class Particle {
     // Let's find the screen position of the particle
     Vec2 pos = box2d.getBodyPixelCoord(body);
     // Is it off the bottom of the screen?
-    if (pos.y > height+r*2) {
+    if (pos.y > height+40) {
       killBody();
       return true;
     }
@@ -72,5 +72,3 @@ class Particle {
 
 
 }
-
-

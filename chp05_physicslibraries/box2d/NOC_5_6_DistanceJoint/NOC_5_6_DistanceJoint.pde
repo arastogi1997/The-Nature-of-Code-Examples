@@ -59,6 +59,12 @@ void draw() {
     wall.display();
   }
   
+  for(int i= pairs.size()-1; i>-1;i--){
+    Pair p=pairs.get(i);
+    if(p.p1.done() || p.p2.done()){
+      pairs.remove(p);}
+  }
+  
   fill(0);
   text("Click mouse to add connected particles.",10,20);
 }
@@ -67,12 +73,3 @@ void mousePressed() {
    Pair p = new Pair(mouseX,mouseY);
    pairs.add(p);
 }
-
-
-
-
-
-
-
-
-
